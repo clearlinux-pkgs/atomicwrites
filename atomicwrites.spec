@@ -4,13 +4,14 @@
 #
 Name     : atomicwrites
 Version  : 1.1.5
-Release  : 2
+Release  : 3
 URL      : http://pypi.debian.net/atomicwrites/atomicwrites-1.1.5.tar.gz
 Source0  : http://pypi.debian.net/atomicwrites/atomicwrites-1.1.5.tar.gz
 Summary  : Atomic file writes.
 Group    : Development/Tools
 License  : MIT
 Requires: atomicwrites-legacypython
+Requires: atomicwrites-python3
 Requires: atomicwrites-python
 BuildRequires : pbr
 BuildRequires : pip
@@ -25,6 +26,7 @@ python-atomicwrites
 %package legacypython
 Summary: legacypython components for the atomicwrites package.
 Group: Default
+Requires: python-core
 
 %description legacypython
 legacypython components for the atomicwrites package.
@@ -34,9 +36,19 @@ legacypython components for the atomicwrites package.
 Summary: python components for the atomicwrites package.
 Group: Default
 Requires: atomicwrites-legacypython
+Requires: atomicwrites-python3
 
 %description python
 python components for the atomicwrites package.
+
+
+%package python3
+Summary: python3 components for the atomicwrites package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the atomicwrites package.
 
 
 %prep
@@ -47,12 +59,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1504998013
+export SOURCE_DATE_EPOCH=1507148733
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1504998013
+export SOURCE_DATE_EPOCH=1507148733
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -68,5 +80,8 @@ echo ----[ mark ]----
 /usr/lib/python2*/*
 
 %files python
+%defattr(-,root,root,-)
+
+%files python3
 %defattr(-,root,root,-)
 /usr/lib/python3*/*
