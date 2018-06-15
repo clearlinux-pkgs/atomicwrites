@@ -4,7 +4,7 @@
 #
 Name     : atomicwrites
 Version  : 1.1.5
-Release  : 12
+Release  : 13
 URL      : http://pypi.debian.net/atomicwrites/atomicwrites-1.1.5.tar.gz
 Source0  : http://pypi.debian.net/atomicwrites/atomicwrites-1.1.5.tar.gz
 Summary  : Atomic file writes.
