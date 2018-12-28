@@ -4,7 +4,7 @@
 #
 Name     : atomicwrites
 Version  : 1.2.1
-Release  : 20
+Release  : 21
 URL      : https://files.pythonhosted.org/packages/ac/ed/a311712ef6b4355035489f665e63e1a73f9eb371929e3c98e5efd451069e/atomicwrites-1.2.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ac/ed/a311712ef6b4355035489f665e63e1a73f9eb371929e3c98e5efd451069e/atomicwrites-1.2.1.tar.gz
 Summary  : Atomic file writes.
