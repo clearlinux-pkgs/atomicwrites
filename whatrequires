@@ -1,1 +1,4 @@
 # This file contains recursive sources that require this package
+pytest
+python-zstandard
+spyder-ide
