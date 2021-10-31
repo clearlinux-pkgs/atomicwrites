@@ -1,5 +1,7 @@
 # This file contains recursive sources that require this package
+ansible
 khal
+lark-parser
 pytest
 python-zstandard
 spyder-ide
